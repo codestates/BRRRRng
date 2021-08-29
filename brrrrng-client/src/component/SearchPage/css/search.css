@@ -1,0 +1,324 @@
+/* header */
+.nav-container {
+  width: 100%;
+  height: 75px;
+  background-color: #46abf4;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menuBtn-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 24px;
+}
+
+.btn {
+  width: 100px;
+  height: 50px;
+  margin-right: 1em;
+}
+
+.btn > button {
+  width: 100px;
+  height: 40px;
+  background: #f9e450;
+  border: 2px solid #1b1b1b;
+  box-sizing: border-box;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 4px 4px 0px #000000;
+  transition: all 0.1s;
+  cursor: pointer;
+}
+
+.btn > button:active {
+  box-shadow: none;
+  transform: translateY(4px);
+}
+
+.btn > button:hover {
+  background-color: #FFBB38;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.logo-container {
+  padding: 1.5rem;
+  width: 180px;
+  height: 80%;
+}
+
+/* section */
+section {
+  width: 100%;
+  height: 85%;
+}
+
+.section_box {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fa-search {
+  font-size: 30px;
+  color: black;
+}
+
+.section-container {
+  margin-top: 90px;
+  width: 60%;
+  height: 60%;
+  justify-content: center;
+}
+
+.logo_container {
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.logo_container > span {
+  font-size: 35px;
+  font-weight: bold;
+  font-family: "Rampart One", cursive;
+}
+
+.logoImg_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.logoImg {
+  width: 120px;
+  height: 120px;
+}
+
+.searchInput_container {
+
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.searchInputs {
+  display: flex;
+  justify-content: center;
+  width: 620px;
+  height: 50px;
+  background: #f7f8fa;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+.select_box {
+  padding: 7px 7px;
+}
+
+.select_box > select {
+  width: 120px;
+  height: 35px;
+  background: #f7f8fa;
+  border: 1px solid #e0e2e7;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.input_box {
+    padding: 7px 8px;
+}
+
+.input_box > input {
+  width: 250px;
+  height: 35px;
+  background: #f7f8fa;
+  border: 1px solid #e0e2e7;
+  border-radius: 10px;
+}
+
+.searchBtn_box {
+    width: 100px;
+    height: 50px;
+}
+
+.searchBtn_box > button {
+    width: 80px;
+    height: 50px;
+    padding: 0;
+    border-radius: 20px;
+    background: #f9e450;
+    font-weight: bold;
+    border: 2px solid black;
+    font-size: 15px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.searchBtn_box > button:hover {
+  background-color: #FFBB38;
+}
+
+
+.resultSection_box {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.logo {
+  text-align: center;
+  line-height: 100px;
+  width: 100%;
+  height: 100px;
+}
+
+.logo > span {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Rampart One", cursive;
+}
+
+.content_container {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.map_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.map {
+  width: 90%;
+  height: 85%;
+}
+
+.map > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.list_container {
+  z-index: 9998;
+  position: absolute;
+  top: 75px;
+  right: 0;
+  bottom: 35px;
+  width: 320px;
+  margin: 0 10px;
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.result {
+  width: 300px;
+  height: 100px;
+  background: #f7f8fa;
+  border: 2px solid lightgray;
+  border-radius: 15px;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.result:hover {
+  background-color: lightgray;
+}
+
+.charger_img {
+  width: 65px;
+  height: 65px;
+}
+
+.charger_img > img {
+  width: 45px;
+  height: 65px;
+  object-fit: contain;
+  padding: 0px 5px 5px 3px;
+}
+
+.charger_description {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: bold;
+  color: grey;
+}
+
+.status_sign > span {
+  font-size: 17px;
+  font-weight: 700;
+  color: green;
+  font-family: "Rampart One", cursive;
+}
+
+.inUse > span {
+  font-size: 17px;
+  font-weight: 700;
+  color: red;
+  font-family: "Rampart One", cursive;
+}
+
+.charger_addr > span {
+  font-size: 10px;
+  color: black
+}
+
+.car_type > span {
+  font-size: 10px;
+  color: black
+}
+
+.backBtn_container {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 160px;
+  height: 50px;
+  left: 0px;
+  top: 150px;
+  box-shadow: 0px 4px 4px #C4C4C4;
+  border: 2px solid black;
+  background: #f9e450;
+  border-radius: 0px 30px 30px 0px;
+  text-align: center;
+}
+
+.backBtn_container > div {
+  margin: 7px 7px;
+}
+
+.fa-long-arrow-alt-left {
+  line-height: 60px;
+  font-size: 35px;
+  color: black;
+}
+
+.backBtn_container > div > span {
+  font-weight: bold;
+  font-size: 20px;
+  color: black;
+}
+
+.backBtn_container:hover {
+  background-color: #ffbb38;
+  cursor: pointer;
+}

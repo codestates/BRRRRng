@@ -1,0 +1,106 @@
+.loginPage {
+  background-color: #46ABF4;
+  height: 100%;
+}
+
+.loginHeader {
+  height: 150px;
+}
+
+#login {
+  background-color: #46ABF4;
+  width: 300px;
+  display: block;
+  float: justify;
+  justify-content: center;
+  text-align: center;
+  margin: 15px auto 50px auto;
+}
+
+#create {
+  /* position: absolute; */
+  width: 380px;
+  display: block;
+  margin: 80px auto 60px auto;
+}
+
+.loginContainer {
+  height: 60%;
+  width: 100%;
+}
+
+.loginInput {
+  background-color: #46ABF4;
+  outline: none;
+  font-size: 18px;
+  display: block;
+  width: 380px;
+  height: 30px;
+  margin: 20px auto;
+  justify-content: center;
+  border: 0;
+  border-bottom: 1px solid #E5E5E5;
+}
+.loginInput:focus {
+  outline: none;
+  border: 0;
+  border-bottom: 1px solid #414141
+  /* box-shadow: 0 1px 0 0 #000000; */
+}
+
+input::placeholder {
+  font-family: 'Fredoka One', cursive;
+  color: #E5E5E5;
+}
+.loginBtn {
+  font-family: 'Fredoka One', cursive;
+  font-size: 27px;
+  display: block;
+  width: 380px;
+  height: 55px;
+  margin: 12px auto;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  text-align: center;;
+}
+.login_btn {
+  background: #F9E450;
+}
+.login_btn:active {
+  background: #FFBB38
+}
+.signup_btn {
+  background: #DEDEDE;
+  height: 30px;
+  padding: 10px 0 15px 0;
+}
+.signup_btn:active {
+  background: #C4C4C4;
+}
+.without_btn {
+  background: #6BBCF6;
+  height: 30px;
+  padding: 10px 0 15px 0;
+}
+.without_btn:active {
+  background: #90CDF8;
+}
+#without {
+  color: #ffffff
+}
+a:link {
+  color: #000000;
+  text-decoration: none;
+}
+a:visited {
+  color: #000000;
+  text-decoration: none;
+}
+#drive {
+  background-color: #46ABF4;
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+}
