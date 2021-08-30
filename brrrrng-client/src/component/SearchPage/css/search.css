@@ -20,7 +20,7 @@
   margin-right: 1em;
 }
 
-.btn > button {
+.btn > a > button {
   width: 100px;
   height: 40px;
   background: #f9e450;
@@ -34,13 +34,13 @@
   cursor: pointer;
 }
 
-.btn > button:active {
+.btn > a > button:active {
   box-shadow: none;
   transform: translateY(4px);
 }
 
-.btn > button:hover {
-  background-color: #FFBB38;
+.btn > a > button:hover {
+  background-color: #ffbb38;
 }
 
 img {
@@ -57,7 +57,7 @@ img {
 /* section */
 section {
   width: 100%;
-  height: 85%;
+  height: 90%;
 }
 
 .section_box {
@@ -75,7 +75,7 @@ section {
 }
 
 .section-container {
-  margin-top: 90px;
+  margin-top: 70px;
   width: 60%;
   height: 60%;
   justify-content: center;
@@ -105,7 +105,6 @@ section {
 }
 
 .searchInput_container {
-
   margin-top: 1rem;
   display: flex;
   justify-content: center;
@@ -135,7 +134,7 @@ section {
 }
 
 .input_box {
-    padding: 7px 8px;
+  padding: 7px 8px;
 }
 
 .input_box > input {
@@ -147,27 +146,26 @@ section {
 }
 
 .searchBtn_box {
-    width: 100px;
-    height: 50px;
+  width: 100px;
+  height: 50px;
 }
 
 .searchBtn_box > button {
-    width: 80px;
-    height: 50px;
-    padding: 0;
-    border-radius: 20px;
-    background: #f9e450;
-    font-weight: bold;
-    border: 2px solid black;
-    font-size: 15px;
-    margin-left: 5px;
-    cursor: pointer;
+  width: 80px;
+  height: 50px;
+  padding: 0;
+  border-radius: 20px;
+  background: #f9e450;
+  font-weight: bold;
+  border: 2px solid black;
+  font-size: 15px;
+  margin-left: 5px;
+  cursor: pointer;
 }
 
 .searchBtn_box > button:hover {
-  background-color: #FFBB38;
+  background-color: #ffbb38;
 }
-
 
 .resultSection_box {
   width: 100%;
@@ -230,15 +228,12 @@ section {
 }
 
 .result {
-  width: 300px;
+  width: 100%;
   height: 100px;
   background: #f7f8fa;
   border: 2px solid lightgray;
   border-radius: 15px;
   margin-top: 8px;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
 }
 
 .result:hover {
@@ -261,30 +256,24 @@ section {
   font-family: "Noto Sans KR", sans-serif;
   font-weight: bold;
   color: grey;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+
+.charger_addr {
+  margin-top: 5px;
 }
 
 .status_sign > span {
-  font-size: 17px;
-  font-weight: 700;
-  color: green;
-  font-family: "Rampart One", cursive;
-}
-
-.inUse > span {
-  font-size: 17px;
-  font-weight: 700;
-  color: red;
-  font-family: "Rampart One", cursive;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Jua", sans-serif;
 }
 
 .charger_addr > span {
   font-size: 10px;
-  color: black
-}
-
-.car_type > span {
-  font-size: 10px;
-  color: black
+  color: black;
 }
 
 .backBtn_container {
@@ -295,11 +284,12 @@ section {
   height: 50px;
   left: 0px;
   top: 150px;
-  box-shadow: 0px 4px 4px #C4C4C4;
+  box-shadow: 0px 4px 4px #c4c4c4;
   border: 2px solid black;
   background: #f9e450;
   border-radius: 0px 30px 30px 0px;
   text-align: center;
+  z-index: 3000;
 }
 
 .backBtn_container > div {
@@ -320,5 +310,121 @@ section {
 
 .backBtn_container:hover {
   background-color: #ffbb38;
+  cursor: pointer;
+}
+
+/* modal 창 */
+
+.uk-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99999;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 15px 15px;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 1;
+  transition: opacity 0.15s linear;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.uk-modal-dialog {
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 500px;
+  height: 600px;
+  border-radius: 20px;
+  border: 2px solid gray;
+  max-width: calc(100% - 0.01px) !important;
+  background: rgba(255, 255, 255, 0.858);
+  z-index: 999999;
+  opacity: 1;
+}
+
+.charger_description_container {
+  display: flex;
+}
+
+.charger_status_sign {
+  text-align: center;
+}
+
+.charger_status_sign > span {
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "Jua", sans-serif;
+}
+
+.D_icon {
+  font-size: 20px;
+}
+.D_text {
+  margin: 15px;
+  text-align: left;
+}
+
+.detail-description-box {
+  height: 130px;
+}
+.detail-description {
+  width: 80%;
+  height: 100px;
+  margin-left: 30px;
+}
+
+.fa-charging-station {
+  font-size: 20px;
+}
+
+.modal_map_container {
+  margin: 25px;
+  width: 100%;
+}
+
+.map_modal {
+  width: 60%;
+  border-radius: 10px;
+}
+
+
+.getDirectBtn_container {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.getDirectBtn > a > button {
+  width: 200px;
+  height: 40px;
+  background: #f9e450;
+  border: 2px solid #1b1b1b;
+  box-sizing: border-box;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 3px 3px 0px #000000;
+  cursor: pointer;
+}
+
+.getDirectBtn > a > button:hover {
+  background: #ffbb38;
+}
+
+.close-btn {
+  text-align: right;
+  margin: 10px;
+}
+.fa-times {
+  text-align: right;
+  font-size: 30px;
   cursor: pointer;
 }

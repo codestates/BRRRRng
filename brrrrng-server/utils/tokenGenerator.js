@@ -3,12 +3,12 @@ const jwt = require("jsonwebtoken");
 
 const genAccessToken = (userData) =>
   jwt.sign(userData, config.accessSecret, {
-    expiresIn: "30m",
+    expiresIn: "2m",
   });
 
 const genRefreshToken = (userData) =>
   jwt.sign(userData, config.refreshSecret, {
-    expiresIn: "1h",
+    expiresIn: "5m",
   });
 
 module.exports = { genAccessToken, genRefreshToken };

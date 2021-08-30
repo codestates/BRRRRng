@@ -1,7 +1,6 @@
 const { User } = require("../models/User");
 const config = require("../config/key");
 const jwt = require("jsonwebtoken");
-const { now } = require("mongoose");
 const { genAccessToken } = require("../utils/tokenGenerator");
 
 const auth = async (req, res, next) => {
@@ -11,9 +10,8 @@ const auth = async (req, res, next) => {
     const accessDecoded = jwt.verify(accessToken, config.accessSecret);
     //토큰이 유효하면 pass
     if (accessDecoded) {
-      return res.json({
-        isAuth: true,
-      });
+      req.accessToken = accessToken;
+      return next();
     }
   } catch (error) {
     try {
@@ -35,7 +33,6 @@ const auth = async (req, res, next) => {
           };
 
           req.accessToken = genAccessToken(userData);
-
           return next();
         }
       }

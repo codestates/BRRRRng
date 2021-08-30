@@ -20,9 +20,12 @@ const userSchema = mongoose.Schema({
       type: String,
     },
   ],
-  carid: [
+  carinfo: [
     {
-      type: String,
+      carname: String,
+      carid: String,
+      maker: String,
+      chargetype: String,
     },
   ],
   refreshToken: {

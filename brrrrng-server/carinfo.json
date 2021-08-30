@@ -1,0 +1,80 @@
+[
+  {
+    "carname": "블루온",
+    "carid": "1",
+    "maker": "hyundai",
+    "chargetype": "DC Chademo"
+  },
+  {
+    "carname": "레이",
+    "carid": "2",
+    "maker": "hyundai",
+    "chargetype": "DC Chademo"
+  },
+  {
+    "carname": "쏘울",
+    "carid": "3",
+    "maker": "hyundai",
+    "chargetype": "DC Chademo"
+  },
+  {
+    "carname": "아이오닉",
+    "carid": "4",
+    "maker": "hyundai",
+    "chargetype": "DC Chademo"
+  },
+  {
+    "carname": "아이오닉",
+    "carid": "5",
+    "maker": "hyundai",
+    "chargetype": "DC combo"
+  },
+  {
+    "carname": "코나",
+    "carid": "6",
+    "maker": "hyundai",
+    "chargetype": "DC combo"
+  },
+  {
+    "carname": "니로",
+    "carid": "7",
+    "maker": "hyundai",
+    "chargetype": "DC combo"
+  },
+  {
+    "carname": "쏘울",
+    "carid": "8",
+    "maker": "hyundai",
+    "chargetype": "DC combo"
+  },
+  {
+    "carname": "ZOE",
+    "carid": "9",
+    "maker": "Renault Samsung",
+    "chargetype": "DC combo"
+  },
+  {
+    "carname": "SPARK",
+    "carid": "10",
+    "maker": "GM",
+    "chargetype": "DC combo"
+  },
+  {
+    "carname": "BOLT",
+    "carid": "11",
+    "maker": "GM",
+    "chargetype": "DC combo"
+  },
+  {
+    "carname": "i3",
+    "carid": "12",
+    "maker": "BMW",
+    "chargetype": "DC combo"
+  },
+  {
+    "carname": "Leaf",
+    "carid": "13",
+    "maker": "Nissan",
+    "chargetype": "DC Chademo"
+  }
+]

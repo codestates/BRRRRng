@@ -1,7 +1,8 @@
 import React from "react";
-import '../../mypage.css'
+import "../../mypage.css";
 
-const ListTable = () => {
+const ListTable = ({ carinfo }) => {
+  console.log(carinfo);
   return (
     <>
       <div className="carlist-table">
@@ -18,28 +19,21 @@ const ListTable = () => {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>
-                <input type="checkbox" />
-              </td>
-              <td className="table-d">아이오닉</td>
-              <td>DC콤보(7핀)</td>
-              <td>급속</td>
-              <td>
-                <i className="fas fa-trash-alt"></i>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <input type="checkbox" />
-              </td>
-              <td className="table-d">아이오닉</td>
-              <td>DC콤보(7핀)</td>
-              <td>완속</td>
-              <td>
-                <i className="fas fa-trash-alt"></i>
-              </td>
-            </tr>
+            {carinfo.map((data, idx) => {
+              return (
+                <tr key={idx}>
+                  <td>
+                    <input type="checkbox" />
+                  </td>
+                  <td className="table-d">{data.carname}</td>
+                  <td>{data.connect_type}</td>
+                  <td>{data.manufacturer}</td>
+                  <td>
+                    <i className="fas fa-trash-alt"></i>
+                  </td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </div>

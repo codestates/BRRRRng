@@ -11,6 +11,7 @@ import CarListPage from "./component/Mypage/Carlist_menu/Carlist";
 import CarSearchPage from "./component/Mypage/Carlist_menu/CarSearch"
 import AddrListPage from "./component/Mypage/Addrlist_menu/Addrlist";
 import UserInfoPage from "./component/Mypage/EditProfile_menu/UserInfo";
+import EditUserInfoPage from "./component/Mypage/EditProfile_menu/EditInfo"
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/mypage/carsearch" component={CarSearchPage} exact />
           <Route path="/mypage/addrlist" component={AddrListPage} exact />
           <Route path="/mypage/user" component={UserInfoPage} exact />
+          <Route path="/mypage/user/edit" component={EditUserInfoPage} exact />
         </Switch>
       </div>
     </Router>

@@ -77,14 +77,14 @@ const login = async (req, res) => {
     res.status(200).cookie("accessToken", accessToken, {
       sameSite: "none",
       httpOnly: true,
-      secure: false,
+      secure: true,
     });
     res
       .status(200)
       .cookie("refreshToken", refreshToken, {
         sameSite: "none",
         httpOnly: true,
-        secure: false,
+        secure: true,
       })
       .json({
         success: true,
@@ -137,7 +137,7 @@ const authtest = (req, res) => {
     .cookie("accessToken", req.accessToken, {
       sameSite: "none",
       httpOnly: true,
-      secure: false,
+      secure: true,
     })
     .json({
       isAuth: true,

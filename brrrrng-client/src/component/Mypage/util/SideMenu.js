@@ -1,23 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "../mypage.css";
+
 const SideMenu = () => {
+  const menu = [
+    { menu: "Home", icon: "fa-home", link: "/mypage" },
+    { menu: "내차 리스트", icon: "fa-car-side", link: "/mypage/carlist" },
+    { menu: "내 주소록", icon: "fa-address-book", link: "/mypage/addrlist" },
+    { menu: "내 정보", icon: "fa-user-cog", link: "/mypage/user" },
+  ];
+
   return (
     <>
       <div className="sideMenu_container">
-        <div className="sideMenu active">
-          <span className="active1">
-            <i className="fas fa-home"></i> Home
-          </span>
-        </div>
-        <div className="sideMenu">
-          <i className="fas fa-car-side"></i> 내차 리스트
-        </div>
-        <div className="sideMenu">
-          <i className="fas fa-address-book"></i> 내 주소록
-        </div>
-        <div className="sideMenu">
-          <i className="fas fa-user-cog"></i> 내 정보
-        </div>
+        <ul>
+          {menu.map((data, idx) => {
+            return (
+              <Link to={data.link}>
+                {" "}
+                <li
+                  key={idx}
+                  className="sideMenu"
+                >
+                  <i className={`fas ${data.icon}`}></i> {data.menu}
+                </li>
+              </Link>
+            );
+          })}
+        </ul>
       </div>
     </>
   );

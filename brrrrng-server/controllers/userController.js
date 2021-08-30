@@ -1,4 +1,5 @@
 const { User } = require("../models/User");
+const { Car } = require("../models/Car");
 
 const getInfo = async (req, res) => {
   console.log("get Info");
@@ -115,11 +116,16 @@ const putMycar = async (req, res) => {
     params: { id },
     body: { carid },
   } = req;
+  const getCarInfo = await Car.findOne({
+    carid,
+  });
+  console.log(getCarInfo);
   const putCar = await User.findByIdAndUpdate(
     { _id: id },
     {
       $push: {
-        carid,
+        // carid,
+        carinfo: getCarInfo,
       },
     },
     {
@@ -147,7 +153,7 @@ const delMycar = async (req, res) => {
     { _id: id },
     {
       $pull: {
-        carid,
+        carinfo: { carid },
       },
     },
     {
