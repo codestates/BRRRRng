@@ -89,6 +89,8 @@ const login = async (req, res) => {
       .json({
         success: true,
         message: "logged in successfully",
+        accessToken: accessToken,
+        isAuth: true,
       });
   } catch (error) {
     res.status(400).json({
@@ -104,7 +106,7 @@ const logout = async (req, res) => {
   try {
     await User.findByIdAndUpdate(
       {
-        _id: req.params.id,
+        _id: req.body._id,
       },
       {
         refreshToken: null,

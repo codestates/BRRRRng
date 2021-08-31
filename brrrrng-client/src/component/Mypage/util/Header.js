@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "antd/dist/antd.css";
-import { Popover, Button, Avatar } from "antd";
+import { Popover, Avatar } from "antd";
 import "../mypage.css";
 import { UserOutlined } from "@ant-design/icons";
 
@@ -38,9 +38,7 @@ const Header = () => {
             content={content}
             trigger="click"
           >
-            <Button>
-             button
-            </Button>
+            <Avatar size="large" icon={<UserOutlined />} style={{ marginRight : "20px"}} />
           </Popover>
         </div>
       </div>

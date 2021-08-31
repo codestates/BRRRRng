@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Header from "./util/Header";
 import "./css/search.css";
-
+import axios from 'axios'
 import cityData from "../../dummydata/cityData";
 
 const Search = () => {
@@ -10,6 +10,8 @@ const Search = () => {
   const [district, setDistrict] = useState("")
   const [address, setAddress] = useState("")
 
+
+  
   const citySelectHandler = (e) => {
     setCity(e.currentTarget.value);
   };
@@ -34,6 +36,16 @@ const Search = () => {
       
        e.preventDefault();
 
+       const A = address ? address : ""
+       const data = {
+         address :city + " " + district + A
+       }
+
+       axios.post(`https://api.brrrrng.ga/charge/search`, data).then(response => {
+         console.log(response.data)
+       })
+       console.log(data)
+      
   }
 
  

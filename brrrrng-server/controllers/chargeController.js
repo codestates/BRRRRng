@@ -1,21 +1,17 @@
 const converter = require("xml-js");
 const request = require("request");
+const config = require("../config/key");
 
 const chargeApi = (req, res) => {
   const { address } = req.body;
   const url =
     "http://openapi.kepco.co.kr/service/EvInfoServiceV2/getEvSearchList";
-  const serviceKey =
-    "3GMHWqWKJx%2BB3lWvNoDiUVWyqMlUVBJ2H9GsCW8f9nwOeQi7wE2Ka85m8kYECISttOXcYN2QtzI6RVoNFxaWuQ%3D%3D";
-  let queryParams =
-    "?" + encodeURIComponent("ServiceKey") + `=${serviceKey}`; /* Service Key*/
+  const serviceKey = config.serviceKey;
+  let queryParams = "?" + encodeURIComponent("ServiceKey") + `=${serviceKey}`;
   queryParams +=
-    "&" + encodeURIComponent("pageNo") + "=" + encodeURIComponent("1"); /* */
+    "&" + encodeURIComponent("pageNo") + "=" + encodeURIComponent("1");
   queryParams +=
-    "&" +
-    encodeURIComponent("numOfRows") +
-    "=" +
-    encodeURIComponent("9999"); /* */
+    "&" + encodeURIComponent("numOfRows") + "=" + encodeURIComponent("9999");
   queryParams +=
     "&" + encodeURIComponent("addr") + "=" + encodeURIComponent(`${address}`);
 

@@ -7,8 +7,8 @@ import {
   REMOVE_FROM_ADDRESTLIST,
 } from "../_actions/types";
 
-export default function (state = {}, action){
-  console.log(state);
+export default function user (state = {}, action){
+
   switch (action.type) {
     case GET_USERINFO:
       return { 

@@ -12,16 +12,4 @@ const carSearch = async (req, res) => {
   return res.status(200).json({ carInfo, success: true });
 };
 
-// const carInfo = (req, res) => {
-//   const { carid } = req.params;
-//   const carInfo = await Car.findById({ carid: carid });
-//   if (!carInfo) {
-//     return res.status(400).json({
-//       success: false,
-//       message: "failed to get carinfo",
-//     });
-//   }
-//   return res.status(200).json({ carInfo, success: true });
-// };
-
 module.exports = { carSearch };

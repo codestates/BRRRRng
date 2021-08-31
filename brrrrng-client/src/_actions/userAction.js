@@ -10,8 +10,11 @@ import {
   REMOVE_FROM_ADDRESTLIST,
 } from "./types";
 
+const API_URL = "http://ec2-52-78-43-100.ap-northeast-2.compute.amazonaws.com"
+
 export const getUserInfo = (id) => {
-  const userInfo = axios.get(`http://localhost:4000/user/${id}/info`).then(response => response.data.userInfo);
+  //ec2-52-78-43-100.ap-northeast-2.compute.amazonaws.com/user/:id/info
+  const userInfo = axios.get(`${API_URL}/${id}/info`).then(response => response.data.userInfo);
 
   return {
     type: GET_USERINFO,

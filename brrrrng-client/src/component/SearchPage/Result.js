@@ -15,13 +15,11 @@ const Result = () => {
 
   useEffect(() => {
 
-    const data = {
-      addr: "서울특별시"
-    }
+    
    
-    axios.post("http://localhost:4000/callback", data).then((result) => {
-      console.log(result);
-      setChargerStations(result.data.data);
+    axios.get("http://localhost:4000/api").then((result) => {
+      console.log(result.data.response.body.items.item);
+      // setChargerStations(result.data.data);
     });
   }, []);
 

@@ -1,0 +1,116 @@
+.sky {
+  margin: 0;
+  background: #46ABF4;
+  overflow-y: hidden;
+  height: 100vh;
+  width: 100vw;
+  margin: 0 auto;
+  /* 이미지 옮기면 적용안돼요 T^T */
+  background-image: url('./cloudNsun.png');
+  background-size: cover;
+  position: relative;
+  overflow-x: hidden;
+}
+
+#skipBtn {
+  font-family: 'Fredoka one', cursive;
+  float: right;
+  /* width: 30px; */
+  background: none;
+  color: #FFFFFF;
+  font-size: 30px;
+  border: none;
+  margin: 0 10px;
+}
+
+#skipBtn:hover {
+  color: #7C7C7C;
+  cursor: pointer;
+}
+
+#skipBtn:active {
+  color: #000000;
+}
+
+.surface {
+  height: 300px;
+  width: 500%;
+  /* src폴더에 이미지 존재해야 적용된다ㅠㅡㅠ */
+  background: url('./rrrroad.png'); 
+  display: block;
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  background-repeat: repeat-x;
+  animation: moveRight 6s linear both;
+}
+
+.looking {
+  font-size: 60px;
+  font-family: 'Cafe24SsurroundAir';
+  text-align : center;
+  text-shadow: -1px 0 #2B2A2A, 0 1px #2B2A2A, 1px 0 #2B2A2A, 0 -1px #2B2A2A;
+  color: #FFE473;
+  position: relative;
+  top: 50%;
+  transform: translateY(-60%);
+  opacity: 0;
+  animation: fadeInText 2s 4s ease-out forwards;
+}
+
+.fadeInLogo {
+  width: 500px;
+  margin: 0 auto;
+  position: relative;
+  top: 45%;
+  opacity: 0;
+  animation: fadeInText 1s 5.5s ease-out forwards;
+}
+
+.car {
+  position: absolute;
+  bottom: 5%;
+  left: 30%;
+  animation: suspension 1s linear 6 both;
+}
+
+.driving {
+  position: fixed;
+  display: inline-block;
+  bottom: 0%;
+  animation: fadeIn 1s 5.5s ease-in-out both;
+}
+
+/* Animation */
+
+@keyframes moveRight {
+  100% {
+    transform: translateX(-2950px)
+  }
+}
+@keyframes suspension {
+  100% { 
+    transform: translateY(-1px)
+  }
+  50% {
+    transform: translateY(2px)
+  }
+  0% {
+    transform: translateY(-1px)
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px)
+  }
+  to {
+    opacity: 3;
+    transform: none;
+  }
+}
+@keyframes fadeInText {
+  100% {
+    opacity: 1;
+  }
+}
