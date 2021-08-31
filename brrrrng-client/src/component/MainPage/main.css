@@ -12,24 +12,29 @@
   overflow-x: hidden;
 }
 
-#skipBtn {
+#startBtn {
   font-family: 'Fredoka one', cursive;
   float: right;
-  /* width: 30px; */
+  display: block;
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  /* width: 300px; */
   background: none;
   color: #FFFFFF;
-  font-size: 30px;
+  font-size: 80px;
   border: none;
   margin: 0 10px;
+  animation: fadeIn 1s 5.5s ease-in-out both;
 }
 
-#skipBtn:hover {
-  color: #7C7C7C;
+#startBtn:hover {
+  color: #DEDEDE;
   cursor: pointer;
 }
 
-#skipBtn:active {
-  color: #000000;
+#startBtn:active {
+  color: #FFE473;
 }
 
 .surface {

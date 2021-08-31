@@ -83,7 +83,7 @@ const Dashboard = () => {
                   </div>
                 </div>
                 <div className="moreBtn-box">
-                 <Link to="/mypage/addrlist"><button id="moreBtn">More</button></Link>
+                  <Link to="/mypage/addrlist"><button id="moreBtn">More</button></Link>
                 </div>
               </card>
               <card className="list_card">
