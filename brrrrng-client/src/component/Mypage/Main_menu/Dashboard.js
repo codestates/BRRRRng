@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import axios from "axios";
+
 import "../mypage.css";
 import Header from "../util/Header";
 import SideMenu from "../util/SideMenu";
-import { Link, useHistory } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import axios from "axios";
-import { getStations } from "../../../_actions/apiAction";
-
 import AddrCard from "./section/AddrCard";
 import CarinfoCard from "./section/CarinfoCard";
-const Dashboard = () => {
-  const [userInfo, setUserInfo] = useState("");
 
+import { getStations } from "../../../_actions/apiAction";
+
+const Dashboard = () => {
+ 
   const [address, setAddress] = useState([]);
   const [carInfo, setCarInfo] = useState([]);
   const [car, setCar] = useState("");
@@ -24,7 +25,6 @@ const Dashboard = () => {
     axios
       .get(`https://api.brrrrng.ga/user/${id}/info`, { withCredentials: true })
       .then((response) => {
-        console.log(response);
         setAddress(response.data.userInfo.address);
         setCarInfo(response.data.userInfo.carinfo);
         setCar(response.data.userInfo.carinfo[0]);

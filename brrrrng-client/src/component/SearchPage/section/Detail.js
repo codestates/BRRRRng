@@ -3,20 +3,13 @@ import "../css/search.css";
 import Map from "./Map";
 
 const Detail = ({ setOpenModal, station }) => {
-  console.log(station);
+  
   const modalHandler = (e) => {
     e.preventDefault();
 
     setOpenModal(false);
   };
 
-  /**
-   * 웃는 표정 <i className="far fa-laugh-wink"></i> = 충전가능 green
-   *  <i class="far fa-grin-beam-sweat"></i> = orange
-   * <i class="far fa-grimace"></i> = 고장/점검 노란색 yellow
-   * frown 찡그린 표정 <i class="far fa-frown"></i> = 통신장애 red
-   * <i class="fas fa-exclamation-triangle"></i> = 통신미연결 red
-   */
   const convertInfo = (cpStat) => {
     switch (cpStat) {
       case "1":
@@ -95,12 +88,12 @@ const Detail = ({ setOpenModal, station }) => {
             <div className="detail-description">
               <div className="detail-table">
                 <div className="D_box">
-                  <i class="fas fa-map-marker-alt"></i> 주소
+                  <i className="fas fa-map-marker-alt"></i> 주소
                   <div>{station.addr}</div>
                 </div>
                 <div className="D_box">
                   <span className="D_icon">
-                    <i class="fas fa-bolt"></i>
+                    <i className="fas fa-bolt"></i>
                   </span>
                   <span className="D_text">
                     급속/완속 : {station.chargeTp === 1 ? "완속" : "급속"}
@@ -108,7 +101,7 @@ const Detail = ({ setOpenModal, station }) => {
                 </div>
                 <div className="D_box">
                   <span className="D_icon">
-                    <i class="far fa-id-badge"></i>
+                    <i className="far fa-id-badge"></i>
                   </span>
                   <span className="D_text">충전기 명칭 : {station.cpNm}</span>
                 </div>
@@ -118,7 +111,7 @@ const Detail = ({ setOpenModal, station }) => {
                 ) : (
                   <div className="D_box">
                     <span className="D_icon">
-                      <i class="fas fa-charging-station"></i>
+                      <i className="fas fa-charging-station"></i>
                     </span>
                     <span className="D_text">
                       충전타입 : {cpTpInfo(station.cpTp)}

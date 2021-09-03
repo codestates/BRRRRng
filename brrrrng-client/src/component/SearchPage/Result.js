@@ -1,10 +1,11 @@
 import React from "react";
-import "./css/search.css";
-import List from "./section/List";
 import { useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
+
+import "./css/search.css";
 import Kakaomap from "./section/Kakaomap";
 import Header from './util/Header'
+import List from "./section/List";
 
 const Result = () => {
 
@@ -12,7 +13,6 @@ const Result = () => {
   const history = useHistory();
   const stations = useSelector(({ chargersReducer }) => chargersReducer.chargerStations);
   
-
   const filtered = stations.map((data) => {
     return {
       addr: data.addr._text,
@@ -31,7 +31,7 @@ const Result = () => {
     e.preventDefault();
     history.push('/search')
   };
-  console.log(filtered);
+
 
   return (
     <div>

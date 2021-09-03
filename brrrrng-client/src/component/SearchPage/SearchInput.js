@@ -2,7 +2,7 @@ import React from "react";
 import "./css/search.css";
 import cityData from "../../dummydata/cityData";
 
-const SearchInput = ({ searchHandler, setAddress, setDistrict, setCity, districts, address }) => {
+const SearchInput = ({ searchHandler, setAddress, setDistrict, setCity, districts }) => {
   
  
 
@@ -11,10 +11,6 @@ const SearchInput = ({ searchHandler, setAddress, setDistrict, setCity, district
   };
   const districtSelectHandler = (e) => {
     setDistrict(e.currentTarget.value);
-  };
-
-  const addressHandler = (e) => {
-    setAddress(e.currentTarget.value);
   };
 
   const searchInputHandler = (e) => {

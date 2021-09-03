@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import Snackbar from "@material-ui/core/Snackbar";
 import MuiAlert from "@material-ui/lab/Alert";
 import { makeStyles } from "@material-ui/core/styles";
+
 import { signupRequest } from "../../_actions/authAction";
 
 const Alert = (props) => {

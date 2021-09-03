@@ -12,31 +12,31 @@ const Kakaomap = ({ chargingStations }) => {
         return {
           image: "../../image/chargeO.png",
           status: "충전가능",
-          color: "green"
+          color: "green",
         };
       case "2":
         return {
           image: "../../image/charging.png",
           status: "충전중",
-          color: "orange"
+          color: "orange",
         };
       case "3":
         return {
           image: "../../image/chargeX.png",
           status: "고장/점검",
-          color: "red"
+          color: "red",
         };
       case "4":
         return {
           image: "../../image/chargeX.png",
           status: "통신장애",
-          color: "red"
+          color: "red",
         };
       case "5":
         return {
           image: "../../image/chargeX.png",
           status: "통신미연결",
-          color: "red"
+          color: "red",
         };
       default:
         return "";
@@ -61,22 +61,20 @@ const Kakaomap = ({ chargingStations }) => {
     }
 
     const createMarker = () => {
-      
-       
       chargingStations.forEach((e) => {
-        const curImage = convertInfo(e.cpStat)
+        const curImage = convertInfo(e.cpStat);
         var imageSrc = curImage.image, // 마커이미지의 주소입니다
           imageSize = new kakao.maps.Size(35, 45), // 마커이미지의 크기입니다
           imageOption = { offset: new kakao.maps.Point(27, 69) }; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
 
         // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
-        
+
         var markerImage = new kakao.maps.MarkerImage(
           imageSrc,
           imageSize,
           imageOption,
         );
-        
+
         const markers = new kakao.maps.Marker({
           map: map,
           position: new kakao.maps.LatLng(e.lat, e.longi),
@@ -86,13 +84,10 @@ const Kakaomap = ({ chargingStations }) => {
     };
 
     const createCustom = () => {
-
-      
       let overlay = [];
       chargingStations.forEach((e) => {
-        const curStatus = convertInfo(e.cpStat)
-      const content = 
-      `<div 
+        const curStatus = convertInfo(e.cpStat);
+        const content = `<div 
       id="infowindow" 
       style={{ color : ${curStatus.color}}}
       >BRRRRng</div>`;

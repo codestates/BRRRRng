@@ -48,18 +48,10 @@ const List = ({ station }) => {
 
   const currentStatus = convertInfo(station.cpStat);
 
-  
 
   return (
     <>
       <div className="result" onClick={showModalHandler}>
-        {/* <div className="charger_img">
-          <img
-            src="../image/free-icon-fuel-pump-3439491.png"
-            alt="charging station"
-            style={{ width: "40px", height: "50px" }}
-          />
-        </div> */}
         <div className="charger_description">
           <div className="status_sign">
             <img
@@ -72,11 +64,11 @@ const List = ({ station }) => {
             </span>
           </div>
           <div className="charger_addr">
-            <i class="fas fa-map-marker-alt"></i>
+            <i className="fas fa-map-marker-alt"></i>
             <span> {station.addr}</span>
           </div>
           <div className="charger_addr">
-            <i class="far fa-clock"></i>
+            <i className="far fa-clock"></i>
             <span> updated: {station.statUpdateTime}</span>
           </div>
         </div>

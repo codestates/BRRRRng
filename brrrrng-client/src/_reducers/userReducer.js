@@ -17,7 +17,8 @@ export default function user (state = {}, action){
       };
     case DELETE_USER: 
       return {
-        
+        ...state,
+        deleteSuccess: action.payload
       }
     case ADD_TO_ADDRESSLIST:
       return {

@@ -1,12 +1,14 @@
 import React, { useState } from "react";
+import axios from "axios";
+
+import { Alert } from "antd";
 import "../mypage.css";
 import "antd/dist/antd.css";
-import { Alert } from "antd";
+
 import Header from "../util/Header";
 import Footer from "../util/Footer"
 import SideMenu from "../util/SideMenu";
 import ResultList from "./section/ResultList";
-import axios from "axios";
 
 const CarSearch = () => {
   const [carname, setCarname] = useState("");
@@ -32,7 +34,6 @@ const CarSearch = () => {
           withCredentials: true,
         })
         .then((response) => {
-          console.log(response)
           setFilteredCar(response.data.carInfo);
         });
 
@@ -44,7 +45,6 @@ const CarSearch = () => {
     setErrorMessage(false);
   }, 1500);
 
-  console.log(filteredCar);
   return (
     <div>
       <Header />

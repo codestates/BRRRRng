@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
+import axios from "axios";
+
 import "../mypage.css";
 import Header from "../util/Header";
 import SideMenu from "../util/SideMenu";
-import axios from "axios";
 import Footer from "../util/Footer";
-import cityData from "../../../dummydata/cityData";
 import AddrEmpty from "./section/AddrEmpty";
+
+import cityData from "../../../dummydata/cityData";
+
 const Addrlist = () => {
   const [city, setCity] = useState("서울특별시");
   const [districts, setDistricts] = useState([]);
@@ -30,7 +33,6 @@ const Addrlist = () => {
       .get(`https://api.brrrrng.ga/user/${id}/info`, { withCredentials: true })
       .then((response) => {
         setUserInfo(response.data.userInfo.address);
-        console.log(response.data.userInfo);
       });
   }, [userInfo]);
 
@@ -55,7 +57,6 @@ const Addrlist = () => {
     axios
       .put(`https://api.brrrrng.ga/user/${id}/address`, data)
       .then((response) => {
-        console.log(response.data);
         if (response.data.success) {
           history.push("/mypage/addrlist");
         }
@@ -63,7 +64,7 @@ const Addrlist = () => {
   };
 
   const deleteMyaddrHandler = (address) => {
-    console.log(typeof carid);
+    
     const id = localStorage.id;
 
     const data = {
@@ -72,11 +73,8 @@ const Addrlist = () => {
       },
     };
 
-    axios
-      .delete(`https://api.brrrrng.ga/user/${id}/address`, data)
-      .then((response) => {
-        console.log(response);
-      });
+    axios.delete(`https://api.brrrrng.ga/user/${id}/address`, data)
+    
   };
 
   return (

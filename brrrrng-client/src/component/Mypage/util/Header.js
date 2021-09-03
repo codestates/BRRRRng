@@ -8,17 +8,17 @@ import { UserOutlined } from "@ant-design/icons";
 const Header = () => {
   const text = (
     <div>
-      <i class='fas fa-bolt' style={{ color: "red" }}></i> BRRRRng
+      <i className='fas fa-bolt' style={{ color: "red" }}></i> BRRRRng
     </div>
   );
   const content = (
     <div>
       <div className='popover-content'>
-        <i class='fas fa-sign-out-alt'></i> Logout
+        <i className='fas fa-sign-out-alt'></i> Logout
       </div>
       <Link to='/mypage'>
         <div className='popover-content'>
-          <i class='fas fa-car-alt'></i> My Car
+          <i className='fas fa-car-alt'></i> My Car
         </div>
       </Link>
     </div>

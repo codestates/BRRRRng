@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import Footer from '../util/Footer'
+import axios from "axios";
+
 import "../mypage.css";
 import Header from "../util/Header";
 import SideMenu from "../util/SideMenu";
+import Footer from '../util/Footer'
 
-import axios from "axios";
+
 const UserInfo = () => {
 
   const [userInfo, setUserInfo] = useState("")
@@ -16,7 +17,6 @@ const UserInfo = () => {
     axios
       .get(`https://api.brrrrng.ga/user/${id}/info`, { withCredentials: true })
       .then((response) => {
-        console.log(response.data);
         setUserInfo(response.data.userInfo)
       });
   }, []);
@@ -30,7 +30,6 @@ const UserInfo = () => {
         withCredentials: true,
       })
       .then((response) => {
-        console.log(response.data);
         if (response.data.success) {
           history.push("/login");
           localStorage.removeItem("id");
@@ -56,14 +55,14 @@ const UserInfo = () => {
                 <div className='userinfo_info'>
                   <div className='infoTable'>
                     <div className='info-box'>
-                      <i class='fas fa-user'></i> Name : {userInfo.username}
+                      <i className='fas fa-user'></i> Name : {userInfo.username}
                     </div>
                     <div className='info-box'>
-                      <i class='far fa-paper-plane'></i> Email :
+                      <i className='far fa-paper-plane'></i> Email :
                       {userInfo.email}
                     </div>
                     <div className='info-box'>
-                      <i class='fas fa-lock'></i> Password : *******
+                      <i className='fas fa-lock'></i> Password : *******
                     </div>
                   </div>
                 </div>

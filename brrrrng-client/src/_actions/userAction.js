@@ -12,9 +12,9 @@ import {
 
 const API_URL = "https://api.brrrrng.ga"
 
-export const getUserInfo = (accessToken) => {
+export const getUserInfo = (id) => {
   //ec2-52-78-43-100.ap-northeast-2.compute.amazonaws.com/user/:id/info
-  const userInfo = axios.post(`${API_URL}/info`, accessToken).then(response => response.data.userInfo);
+  const userInfo = axios.post(`${API_URL}/user/${id}/info`, id).then(response => response.data.userInfo);
 
   return {
     type: GET_USERINFO,
@@ -24,8 +24,8 @@ export const getUserInfo = (accessToken) => {
   
 };
 
-export const deleteUser = (accessToken) => {
-  const resResult = axios.delete(`http://localhost:4000/user/${accessToken}/delete`).then(response => response.data.success)
+export const deleteUser = (id) => {
+  const resResult = axios.delete(`${API_URL}/user/${id}/delete`).then(response => response.data.success)
 
   return {
     type: DELETE_USER,
@@ -33,9 +33,9 @@ export const deleteUser = (accessToken) => {
   }
 }
 
-export const addToMycarList = (accessToken, data) => {
+export const addToMycarList = (id, data) => {
   const resResult = axios
-    .put(`http://localhost:4000/user/${accessToken}/edit`, data)
+    .put(`${API_URL}/user/${id}/mycar`, data)
     .then((result) => result.data.success);
 
   return {
@@ -44,9 +44,9 @@ export const addToMycarList = (accessToken, data) => {
   };
 };
 
-export const removeFromMycarList = (accessToken, idx) => {
+export const removeFromMycarList = (id, idx) => {
   const resResult = axios
-    .put(`http://localhost:4000/user/${accessToken}/edit`, idx)
+    .delete(`${API_URL}/user/${id}/mycar`, idx)
     .then((result) => result.data.success);
 
   return {
@@ -57,7 +57,7 @@ export const removeFromMycarList = (accessToken, idx) => {
 
 export const addToMyaddressList = (id, data) => {
   const resResult = axios
-    .put(`http://localhost:4000/user/${id}/edit`, data)
+    .put(`${API_URL}/user/${id}/address`, data)
     .then((result) => result.data.success);
 
   return {
@@ -68,7 +68,7 @@ export const addToMyaddressList = (id, data) => {
 
 export const removeFromMyaddressList = (id, idx) => {
   const resResult = axios
-    .put(`http://localhost:4000/user/${id}/delete`, idx)
+    .delete(`${API_URL}/user/${id}/address`, idx)
     .then((result) => result.data.success);
 
   return {

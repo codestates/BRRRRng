@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+
 import '../mypage.css'
 import Header from '../util/Header'
 import Footer from '../util/Footer'
 import SideMenu from '../util/SideMenu'
 import ListTable from './section/ListTable'
-
 
 import axios from 'axios'
 
@@ -16,7 +16,7 @@ const Carlist = () => {
     
     const id = localStorage.id
     axios.get(`https://api.brrrrng.ga/user/${id}/info`, {withCredentials: true}).then(response => {
-      console.log(response.data)
+      
       setMyCarlist(response.data.userInfo.carinfo)
     })
 

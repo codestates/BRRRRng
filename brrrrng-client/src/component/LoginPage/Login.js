@@ -53,13 +53,10 @@ const Login = () => {
       setErrorMessage("비밀번호를 입력하세요");
     } else {
       dispatch(loginRequest(data)).then((response) => {
-        console.log(response.payload);
         if (response.payload.data) {
-          console.log(response.payload);
           localStorage.setItem("id", response.payload.data.userInfo._id);
           history.push("/search");
         } else if (response.payload.error) {
-          console.log("errors");
         } else {
           setOpen(true);
           setErrorMessage("이메일 또는 비밀번호이 틀렸습니다.");
