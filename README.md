@@ -1,4 +1,5 @@
 # BRRRRng
+![스크린샷 2021-09-07 오전 1 30 49](https://user-images.githubusercontent.com/75926861/132245025-09e3907a-b143-44e3-97e2-cd02cac17e99.png)
 
 # Flow Chart
 ![back_flowchart](https://user-images.githubusercontent.com/75926861/130465685-3077de5b-084d-42ac-9576-af06879fa224.png)
@@ -15,10 +16,10 @@ https://brrrrng.ga
 
 | 역할 |  이름  |   담당    | Github                                                                                                                                                                      |
 | :--: | :----: | :-------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 팀장 | 이세경 | FRONT-END |  <a href="https://github.com/segyong56" target="_blank"><img src="https://img.shields.io/badge/segyong56-5294E2?style=for-the-badge&logo=GitHub&logoColor=white"/></a>      |
-| 팀원 | 오가영 | FRONT-END |  <a href="https://github.com/5gazero" target="_blank"><img src="https://img.shields.io/badge/5gazero-5294E2?style=for-the-badge&logo=GitHub&logoColor=white"/></a>      |
-| 팀원 | 오동욱 | BACK-END  |  <a href="https://github.com/wookieOH" target="_blank"><img src="https://img.shields.io/badge/wookieOH-5294E2?style=for-the-badge&logo=GitHub&logoColor=white"/></a>      |
-| 팀원 | 강주오 | BACK-END  |  <a href="https://github.com/KangJuO" target="_blank"><img src="https://img.shields.io/badge/KangJuO-5294E2?style=for-the-badge&logo=GitHub&logoColor=white"/></a>      |
+| 팀장 | 이세경 | FRONT-END |  <a href="https://github.com/segyong56" target="_blank"><img src="https://img.shields.io/badge/segyong56-47ACF4?style=for-the-badge&logo=GitHub&logoColor=white"/></a>      |
+| 팀원 | 오가영 | FRONT-END |  <a href="https://github.com/5gazero" target="_blank"><img src="https://img.shields.io/badge/5gazero-47ACF4?style=for-the-badge&logo=GitHub&logoColor=white"/></a>      |
+| 팀원 | 오동욱 | BACK-END  |  <a href="https://github.com/wookieOH" target="_blank"><img src="https://img.shields.io/badge/wookieOH-47ACF4?style=for-the-badge&logo=GitHub&logoColor=white"/></a>      |
+| 팀원 | 강주오 | BACK-END  |  <a href="https://github.com/KangJuO" target="_blank"><img src="https://img.shields.io/badge/KangJuO-47ACF4?style=for-the-badge&logo=GitHub&logoColor=white"/></a>      |
 
 <br/>
 
