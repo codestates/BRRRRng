@@ -1,6 +1,8 @@
 # BRRRRng
 ![Logo](https://user-images.githubusercontent.com/75926861/132245129-65ba1371-8ab0-4a33-a1f9-dd2f86e4070a.png)
 
+# 서비스 소개
+### 지도를 기반으로 주변 전기차 충전소를 빠르게 찾을 수 있는 서비스
 
 # Flow Chart
 ![back_flowchart](https://user-images.githubusercontent.com/75926861/130465685-3077de5b-084d-42ac-9576-af06879fa224.png)
