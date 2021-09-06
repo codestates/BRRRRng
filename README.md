@@ -1,5 +1,6 @@
 # BRRRRng
-![스크린샷 2021-09-07 오전 1 30 49](https://user-images.githubusercontent.com/75926861/132245025-09e3907a-b143-44e3-97e2-cd02cac17e99.png)
+![Logo](https://user-images.githubusercontent.com/75926861/132245129-65ba1371-8ab0-4a33-a1f9-dd2f86e4070a.png)
+
 
 # Flow Chart
 ![back_flowchart](https://user-images.githubusercontent.com/75926861/130465685-3077de5b-084d-42ac-9576-af06879fa224.png)
