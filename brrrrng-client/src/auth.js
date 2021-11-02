@@ -12,7 +12,7 @@ export default function checkAuth(
     useEffect(() => {
       try {
         async function response() {
-          const responses = await axios.get("https://api.brrrrng.ga/auth", {
+          const responses = await axios.get(`${process.env.REACT_APP_API_URL}/auth`, {
             withCredentials: true,
           });
 
