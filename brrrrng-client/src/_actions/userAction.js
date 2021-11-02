@@ -10,10 +10,10 @@ import {
   REMOVE_FROM_ADDRESTLIST,
 } from "./types";
 
-const API_URL = "https://api.brrrrng.ga"
+const API_URL = process.env.REACT_APP_API_URL
 
 export const getUserInfo = (id) => {
-  //ec2-52-78-43-100.ap-northeast-2.compute.amazonaws.com/user/:id/info
+  
   const userInfo = axios.post(`${API_URL}/user/${id}/info`, id).then(response => response.data.userInfo);
 
   return {
